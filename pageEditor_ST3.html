@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor - Shraddha Baniya</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+    /* ---- Page Editor layout: sidebar + main ---- */
+    .page-wrapper {
+      max-width: 1100px;
+      margin: 40px auto 60px;
+      padding: 0 20px;
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    /* Sidebar */
+    aside {
+      flex: 0 0 220px;
+      background-color: #f0f5f1;
+      border: 1px solid #c8ddc8;
+      border-radius: 10px;
+      padding: 20px;
+      position: sticky;
+      top: 80px;
+    }
+
+    aside h3 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #294936;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #4ddb85;
+    }
+
+    aside ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    aside ul li {
+      margin-bottom: 6px;
+    }
+
+    aside ul li a {
+      color: #294936;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    aside ul li a:hover {
+      color: #d4a44a;
+      text-decoration: underline;
+    }
+
+    /* Main content */
+    main {
+      flex: 1;
+    }
+
+    main h1 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 2rem;
+      color: #294936;
+      margin-bottom: 8px;
+      border-left: 5px solid #d4a44a;
+      padding-left: 16px;
+    }
+
+    .stud-info {
+      background-color: #294936;
+      color: white;
+      border-radius: 8px;
+      padding: 14px 20px;
+      margin-bottom: 24px;
+      font-size: 0.9rem;
+    }
+
+    .stud-info p { margin: 3px 0; }
+
+    section {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.3rem;
+      color: #294936;
+      margin: 0 0 12px 0;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #e8f0eb;
+    }
+
+    section h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #294936;
+      margin: 16px 0 6px 0;
+    }
+
+    section p {
+      margin: 0 0 10px 0;
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+    section a {
+      color: #294936;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    section a:hover { color: #d4a44a; }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      margin-top: 12px;
+    }
+
+    thead tr {
+      background-color: #294936;
+      color: white;
+    }
+
+    th {
+      padding: 10px 12px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    td {
+      padding: 9px 12px;
+      border-bottom: 1px solid #e8f0eb;
+      vertical-align: top;
+      color: #444;
+    }
+
+    tr:last-child td { border-bottom: none; }
+    tr:nth-child(even) td { background-color: #f9fbf9; }
+    tr:hover td { background-color: #f0f5f1; }
+
+    /* Reference list */
+    ul.ref {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul.ref li {
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* Go to Top */
+    .go-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #294936;
+      color: white;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 10px 16px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: background-color 0.2s;
+      z-index: 999;
+    }
+
+    .go-top:hover { background-color: #d4a44a; }
+    
+    </style>
+    
+  </head>
+  
+  <body id="top">
+
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="Images/logo.jpeg" alt="Sustainable Cities logo" class="logo-img" width="40" height="40">
+        <span class="logo-text">Sustainable Cities and Communities</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="../Web-Coursework/index.html" class="nav-link">Home</a></li>
+          <li><a href="../Web-Coursework/gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="../web_project/splash.html" class="nav-link">Splash</a></li>
+          <li><a href="../web_project/simulator.html" class="nav-link">Simulator</a></li>
+          <li><a href="../CWK/feedback.html" class="nav-link nav-link-active">Feedback</a></li>
+          <li><a href="../CWK/team.html" class="nav-link">Team</a></li>
+          <li><a href="../webCS/profile.html" class="nav-link">Profile</a></li>
+          <li><a href="../webCS/sitemap.html" class="nav-link">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+
+    <!-- =====================
+         SIDEBAR — internal navigation
+    ===================== -->
+    <aside>
+      <h3>Pages by Student 3</h3>
+      <ul>
+        <li><a href="#feedback">Feedback & Programmes</a></li>
+        <li><a href="#team">Team Page</a></li>
+        <li><a href="#content">Content Page</a></li>
+        <li><a href="#challenge">Challenges & Lessons</a></li>
+        <li><a href="#compliance">Compliance</a></li>
+        <li><a href="#meetings">Group Meetings Log</a></li>
+        <li><a href="#references">References</a></li>
+      </ul>
+    </aside>
+
+    <!-- =====================
+         MAIN CONTENT
+    ===================== -->
+    <main>
+      <h1>Page Editor — Shraddha Baniya</h1>
+
+      <div class="stud-info">
+        <p><strong>Name:</strong> Shraddha Baniya</p>
+        <p><strong>Student ID:</strong> w2121958</p>
+        <p><strong>Role:</strong> Student 3 — Feedback & Programme Directory, Team Page, Content Page</p>
+      </div>
+
+      <!-- ---- FEEDBACK PAGE ---- -->
+      <section id="feedback">
+        <h2>Feedback & Programme Directory Page</h2>
+
+        <h3>Technical Description</h3>
+        <p>
+          The Feedback and Programme Directory page is structured into three distinct sections: a scrollable
+          programme directory, a ratings and reviews panel, and a feedback form. The page links to the shared
+          <code>style.css</code> external stylesheet for consistent typography, colours, and layout across
+          the site.
+        </p>
+        <p>
+          The programme directory uses <code>display: grid</code> with
+          <code>grid-template-columns: repeat(3, 1fr)</code> to arrange six programme cards into two rows
+          of three columns. The wrapper div uses <code>max-height: 500px</code> and
+          <code>overflow-y: auto</code> to create a scrollable container. Each card uses
+          <code>transition: transform 0.2s</code> for a smooth lift effect on hover.
+        </p>
+        <p>
+          The feedback form uses two <code>&lt;fieldset&gt;</code> elements with <code>&lt;legend&gt;</code>
+          tags to group related fields into "Personal Details" and "Feedback Details". It includes all
+          required input types: <code>type="text"</code>, <code>type="email"</code>, <code>type="tel"</code>,
+          <code>type="date"</code>, <code>type="datetime-local"</code>, a <code>&lt;textarea&gt;</code>,
+          a <code>&lt;select&gt;</code> dropdown, a <code>multiple</code> select list, and a
+          <code>&lt;datalist&gt;</code> for searchable suggestions. JavaScript provides three interactive
+          features: a live character counter that updates on every keystroke using an <code>input</code>
+          event listener, field validation on form submission with error messages displayed next to invalid
+          fields, and a confirmation message shown on successful submission without a page reload.
+        </p>
+
+        <h3>Accessibility</h3>
+        <p>
+          All images include descriptive <code>alt</code> text. Every form input has an associated
+          <code>&lt;label&gt;</code> linked via the <code>for</code> attribute. Required fields are marked
+          with a visible asterisk and the <code>required</code> HTML attribute. The sort dropdown uses
+          <code>aria-label</code>. Error messages are placed directly below their fields and the
+          confirmation message uses <code>role="alert"</code> so assistive technologies announce it
+          automatically.
+        </p>
+
+        <h3>Link to Validation Page</h3>
+        <p><a href="..//web_project/validation_ST0.html">View HTML validation report for the Feedback page.</a></p>
+
+        <h3>Link to the Page</h3>
+        <p><a href="feedback.html">Open the Feedback & Programme Directory page.</a></p>
+      </section>
+
+
+      <!-- ---- TEAM PAGE ---- -->
+      <section id="team">
+        <h2>Team Page</h2>
+
+        <h3>Technical Description</h3>
+        <p>
+          The Team page presents four team member cards in a responsive grid using
+          <code>display: grid</code> with <code>grid-template-columns: repeat(auto-fill, minmax(210px, 1fr))</code>,
+          which automatically wraps cards onto a new row on smaller screens. Each card contains three
+          child elements: <code>.member-photo</code> for the thumbnail image, <code>.member-info</code>
+          showing the name and role at all times, and <code>.overlay</code> for the expandable details panel.
+        </p>
+        <p>
+          The expandable details effect is implemented using CSS only — no JavaScript is required. The
+          <code>.overlay</code> has <code>max-height: 0</code> and <code>overflow: hidden</code> by
+          default. On <code>:hover</code> or <code>:focus</code>, the rule
+          <code>.member-card:hover .overlay</code> sets <code>max-height: 200px</code> and restores
+          padding, causing the panel to expand downward. A <code>transition</code> on
+          <code>max-height</code> and <code>padding</code> creates the smooth sliding animation.
+        </p>
+
+        <h3>Accessibility</h3>
+        <p>
+          Each card has <code>tabindex="0"</code> for keyboard navigation and <code>role="button"</code>
+          with an <code>aria-label</code> identifying the team member. All images include descriptive
+          <code>alt</code> text. The focus state reuses the hover styling — a green
+          <code>outline: 3px solid #4ddb85</code> — providing a clear visible indicator for keyboard users.
+        </p>
+
+        <h3>Link to Validation Page</h3>
+        <p><a href="../web_project/validation_ST0.html">View HTML validation report for the Team page.</a></p>
+
+        <h3>Link to the Page</h3>
+        <p><a href="team.html">Open the Team page.</a></p>
+      </section>
+
+
+      <!-- ---- CONTENT PAGE ---- -->
+      <section id="content">
+        <h2>Content Page — Challenges of Urbanisation</h2>
+
+        <h3>Technical Description</h3>
+        <p>
+          The content page covers the Challenges of Urbanisation in relation to SDG 11. It is divided into
+          four clearly defined sections, each with a unique <code>id</code> attribute to support internal
+          anchor navigation. At the top, an internal navigation menu uses an ordered list with anchor links
+          (<code>href="#section-id"</code>) so users can jump directly to any section. Each section heading
+          uses <code>scroll-margin-top: 20px</code> to prevent the sticky header from overlapping the
+          section target.
+        </p>
+        <p>
+          Images use <code>border-radius: 10px</code>, <code>box-shadow</code>, and fixed <code>height</code>
+          with <code>object-fit: cover</code> for consistent presentation. A three-column image row uses
+          <code>display: grid; grid-template-columns: 1fr 1fr 1fr</code>, collapsing to one column on small
+          screens via a <code>@media</code> query. The Go to Top button uses
+          <code>position: fixed; bottom: 30px; right: 30px</code> so it is always visible while scrolling,
+          and links to <code>id="top"</code> on the header element.
+        </p>
+
+        <h3>Accessibility</h3>
+        <p>
+          The page follows a strict heading hierarchy: one <code>&lt;h1&gt;</code> in the banner,
+          <code>&lt;h2&gt;</code> for each section, and <code>&lt;h3&gt;</code> for sub-topics. All images
+          include meaningful <code>alt</code> text. The internal navigation uses
+          <code>aria-label="Page contents"</code> to distinguish it from the main site navigation. The
+          Go to Top button includes <code>aria-label="Go back to the top of the page"</code> for screen
+          reader users.
+        </p>
+
+        <h3>Link to Validation Page</h3>
+        <p><a href="../web_project/validation_ST0.html">View HTML validation report for the Content page.</a></p>
+
+        <h3>Link to the Page</h3>
+        <p><a href="content.html">Open the Challenges of Urbanisation content page.</a></p>
+      </section>
+
+
+      <!-- ---- CHALLENGES ---- -->
+      <section id="challenge">
+        <h2>Challenges and Lessons Learned</h2>
+        <p>
+          One of the main challenges I faced was a JavaScript variable name mismatch in the feedback form.
+          The character counter variables (<code>messageArea</code>, <code>charCounter</code>,
+          <code>MAX_CHARS</code>) did not match the names used in the event listener
+          (<code>messageBox</code>, <code>counter</code>, <code>MAX</code>), which caused a
+          <code>ReferenceError</code> that broke the entire script. I resolved this by carefully reviewing
+          all variable names and making them consistent throughout. This taught me to always declare
+          variables in one place and reference them by the same name.
+        </p>
+        <p>
+          A second challenge was implementing the team card hover effect correctly. My first approach used
+          an absolutely positioned overlay on the photo, which did not match the brief's requirement for
+          the details to appear below the card. I reworked the design using <code>max-height: 0</code>
+          and a CSS transition on the details box placed after the name bar, producing the correct
+          slide-down behaviour using CSS only. This taught me to read requirements carefully before coding.
+        </p>
+        <p>
+          I also found it challenging to keep the content page consistent with the rest of the site.
+          Initially it had all its CSS embedded instead of linking to <code>style.css</code>, which caused
+          header and footer styling inconsistencies. Moving page-specific styles to an embedded block and
+          using the shared stylesheet for global styles resolved this.
+        </p>
+      </section>
+
+
+      <!-- ---- COMPLIANCE ---- -->
+      <section id="compliance">
+        <h2>Compliance with JANET Regulations</h2>
+        <p>
+          All pages I implemented comply with JANET regulations for the publication of web pages. All
+          written content is original and produced by me. Images are sourced from Unsplash under a
+          royalty-free licence permitting educational use. No copyrighted text has been reproduced. The
+          pages contain no offensive, discriminatory, or inappropriate material.
+        </p>
+        <p>
+          The feedback form processes submissions client-side only and does not transmit or store any
+          personal data on a server. All pages have been validated against W3C HTML standards, include
+          appropriate <code>alt</code> text, use semantic HTML elements, and include keyboard accessibility
+          features in line with basic WCAG guidelines.
+        </p>
+        <p>
+          <a href="https://intranet.ecs.westminster.ac.uk/modules/4COSC011W/compliance.html" target="_blank">
+            See the lecture notes for more details on JANET compliance.
+          </a>
+        </p>
+      </section>
+
+
+      <!-- ---- GROUP MEETINGS ---- -->
+      <section id="meetings">
+        <h2>Group Meetings and Individual Contribution Log</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Meeting</th>
+              <th>Date & Time</th>
+              <th>Format</th>
+              <th>Objective</th>
+              <th>Attended</th>
+              <th>My Individual Contribution</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td><td>12 Feb 2026</td><td>Face-to-face</td>
+              <td>Choose SDG and assign roles</td><td>Yes</td>
+              <td>Proposed SDG 11 and agreed to take responsibility for the Feedback, Team, and Content pages.</td>
+            </tr>
+            <tr>
+              <td>2</td><td>20 Feb 2026</td><td>Face-to-face</td>
+              <td>Agree colour palette and layout</td><td>Yes</td>
+              <td>Suggested the green/orange colour scheme and reviewed the shared CSS template.</td>
+            </tr>
+            <tr>
+              <td>3</td><td>9 Mar 2026</td><td>Face-to-face</td>
+              <td>Review template and navigation</td><td>Yes</td>
+              <td>Tested navigation links across pages and gave feedback on the shared template structure.</td>
+            </tr>
+            <tr>
+              <td>4</td><td>24 Mar 2026</td><td>Face-to-face</td>
+              <td>Progress check on individual pages</td><td>Yes</td>
+              <td>Demonstrated my Feedback page draft, identified the JS variable bug, and resolved CSS conflicts.</td>
+            </tr>
+            <tr>
+              <td>5</td><td>31 Mar 2026</td><td>Face-to-face</td>
+              <td>Integration testing</td><td>Yes</td>
+              <td>Tested cross-page links, fixed the team card hover behaviour, and ensured content page used shared CSS.</td>
+            </tr>
+            <tr>
+              <td>6</td><td>3 Apr 2026</td><td>Face-to-face</td>
+              <td>Final review and validation</td><td>Yes</td>
+              <td>Validated all three pages using the W3C validator, took screenshots, and completed the Page Editor.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      
+      <!-- ---- REFERENCES ---- -->
+      <section id="references">
+        <h2>References</h2>
+        <ul class="ref">
+          <li>United Nations (2015). <em>Transforming our world: the 2030 Agenda for Sustainable Development.</em> Available at: https://sdgs.un.org/goals/goal11</li>
+          <li>University of Westminster (2025). <em>4COSC011W Web Design and Development Lecture Notes.</em></li>
+          <li>W3Schools (2026). <em>HTML, CSS, and JavaScript Tutorials.</em> Available at: https://www.w3schools.com</li>
+          <li>Unsplash (2026). <em>Free high-resolution photographs.</em> Available at: https://unsplash.com</li>
+          <li>Coolors (2026). <em>Color Palette Generator.</em> Available at: https://coolors.co</li>
+          <li>w3c Validator (2026). <em>HTML and CSS Validation Services.</em> Available at: https://validator.w3.org</li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Go to Top button -->
+  <a href="#top" class="go-top" aria-label="Go back to the top of the page">&#8679; Top</a>
+
+  <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+
+            <ul>
+              <li><a href="../Web-Coursework/index.html" class="footer-link">Home</a></li>
+              <li><a href="../Web-Coursework/gallery.html" class="footer-link">Gallery</a></li>
+              <li><a href="../web_project/validation_ST0.html" class="footer-link">Validation</a></li>
+              <li><a href="#" class="student-1">Student-1 Tara Sah | ID: w2121966</a></li>
+              <li><a href="#" class="student-2">Student-2 Lalika Sah | ID: w2122516</a></li>
+              <li><a href="#" class="student-3">Student-3 Shraddha Baniya | ID: w2121958</a></li>
+              <li><a href="#" class="student-4">Student-4 Binisha Shrestha | ID: w2149568</a></li>
+            </ul>
+            </div>
+
+          <div>
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="../Web-Coursework/pageEditor_ST1.html" class="footer-link">ST1: Page Editor</a></li>
+              <li><a href="../web_project/pageEditor_ST2.html" class="footer-link">ST2: Page Editor</a></li>
+              <li><a href="../CWK/pageEditor_ST3.html" class="footer-link">ST3: Page Editor</a></li>
+              <li><a href="../webCS/pageeditor.html" class="footer-link">ST4: Page Editor</a></li>
+              <li><a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer" class="footer-link">W3C Validation</a></li>
+
+            </ul>
+          </div>
+         
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Sustainable Cities & Communities — Student 1 | SDG Coursework Project</p>
+        </div>
+      </div>
+    </footer>
+
+</body>
+</html>

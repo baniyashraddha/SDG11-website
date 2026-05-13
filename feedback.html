@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programmes & Feedback</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+      <div class="container header-inner">
+        <a href="index.html" class="logo-link">
+          <img src="Images/logo.jpeg" alt="Sustainable Cities logo" class="logo-img" width="40" height="40">
+          <span class="logo-text">Sustainable Cities and Communities</span>
+        </a>
+
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="../Web-Coursework/index.html" class="nav-link">Home</a></li>
+            <li><a href="../Web-Coursework/gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="../web_project/splash.html" class="nav-link">Splash</a></li>
+            <li><a href="../web_project/simulator.html" class="nav-link">Simulator</a></li>
+            <li><a href="../CWK/feedback.html" class="nav-link nav-link-active">Feedback</a></li>
+            <li><a href="../CWK/team.html" class="nav-link">Team</a></li>
+            <li><a href="../webCS/profile.html" class="nav-link">Profile</a></li>
+            <li><a href="../webCS/sitemap.html" class="nav-link">Sitemap</a></li>
+
+
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="banner">
+      <h1>SDG Programmes & Feedback</h1>
+      <p>Explore sustainable city initiatives and community projects — and share your experience with us.</p>
+    </div>
+
+
+    <main>
+
+      <!-- SECTION 1: PROGRAMME DIRECTORY -->
+      <section>
+        <h2 class="section-heading">Programme Directory</h2>
+        <div class="section-line"></div>
+        <p class="section-desc">Browse sustainable cities opportunities. Scroll to explore all programmes.</p>
+
+        <!-- Sort dropdown + count -->
+        <div class="dir-controls">
+          <span>Showing <strong>6</strong> of 301 programmes found</span>
+          <select aria-label="Sort programmes">
+            <option>Most Popular</option>
+            <option>Nearest</option>
+            <option>Student-Friendly</option>
+            <option>Recently Added</option>
+          </select>
+        </div>
+
+        <!-- Scrollable box containing programme cards -->
+        <div class="cards-scroll-box">
+          <div class="cards-grid">
+
+            <!-- Card 1 -->
+            <div class="card">
+              <img src="https://images.unsplash.com/photo-1630404991412-9504d094e8ba?w=600&auto=format&fit=crop" alt="A modern sustainable city skyline with green buildings">
+              <div class="card-body">
+                <h3>Green Building Design Challenge</h3>
+                <p>Work with architects and planners to design eco-friendly buildings that reduce energy use and improve urban living conditions.</p>
+                <span class="badge">📅 8 Weeks</span>
+                <span class="badge">🎓 Students</span><br>
+                <button class="card-btn" type="button">Get Involved</button>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+              <img src="https://images.unsplash.com/photo-1616633536667-ed21976ba2c7?w=600&auto=format&fit=crop" alt="People using a clean public transport system in a city">
+              <div class="card-body">
+                <h3>Clean Transport Campaign</h3>
+                <p>Advocate for better cycling lanes, electric buses, and pedestrian-friendly streets in your city. Help create safer, cleaner transport.</p>
+                <span class="badge">📅 Ongoing</span>
+                <span class="badge">🚲 Active</span><br>
+                <button class="card-btn" type="button">Join Campaign</button>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+              <img src="https://images.unsplash.com/photo-1628243989859-db92e2de1340?w=600&auto=format&fit=crop" alt="A community garden in an urban neighbourhood">
+              <div class="card-body">
+                <h3>Urban Community Gardens</h3>
+                <p>Transform unused urban spaces into thriving community gardens. Improve local food security and bring neighbours together.</p>
+                <span class="badge">📅 Flexible</span>
+                <span class="badge">🆓 Free</span><br>
+                <button class="card-btn" type="button">Learn More</button>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+              <img src="https://images.unsplash.com/photo-1623652554515-91c833e3080e?w=600&auto=format&fit=crop" alt="Students in a workshop about smart city technology">
+              <div class="card-body">
+                <h3>Smart Cities Workshop Series</h3>
+                <p>A five-session programme exploring how technology can improve city infrastructure, waste management, and public services.</p>
+                <span class="badge">📅 5 Sessions</span>
+                <span class="badge">🎓 Students</span><br>
+                <button class="card-btn" type="button">Register Now</button>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+              <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?w=400&h=200&fit=crop" alt="Affordable housing blocks in a city neighbourhood">
+              <div class="card-body">
+                <h3>Affordable Housing Advocacy</h3>
+                <p>Join local advocacy groups pushing for fair housing policies. Attend council meetings, create petitions, and raise awareness.</p>
+                <span class="badge">📅 3 Months</span>
+                <span class="badge">🌐 Hybrid</span><br>
+                <button class="card-btn" type="button">Get Involved</button>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card">
+              <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=400&h=200&fit=crop" alt="Volunteers collecting rubbish in a city street">
+              <div class="card-body">
+                <h3>Neighbourhood Clean Streets Drive</h3>
+                <p>Organise or join monthly street clean-up events in your neighbourhood. Help keep public spaces safe, clean, and welcoming for everyone.</p>
+                <span class="badge">📅 Monthly</span>
+                <span class="badge">🏙️ Local</span><br>
+                <button class="card-btn" type="button">Learn More</button>
+              </div>
+            </div>
+
+          </div><!-- end cards-grid -->
+        </div><!-- end cards-scroll-box -->
+      </section>
+
+
+      <!-- SECTION 2: RATINGS & REVIEWS -->
+      <section class="ratings-section">
+        <h2 class="section-heading">Ratings & Reviews</h2>
+        <div class="section-line"></div>
+        <p class="section-desc">See what participants are saying about our sustainable city programmes.</p>
+
+        <div class="ratings-layout">
+
+          <!-- Overall score summary -->
+          <div class="rating-summary">
+            <div class="big-score">8.9<span style="font-size:1.2rem; color:#aee8c8">/10</span></div>
+            <div class="score-label">Excellent ★★★★☆</div>
+            <div class="score-count">Based on 134 verified reviews</div>
+          </div>
+
+          <!-- Three review cards -->
+          <div class="review-list">
+
+            <div class="review-card">
+              <div class="review-top">
+                <span class="review-title">Opened my eyes to urban sustainability</span>
+                <span class="review-score">10/10 Excellent</span>
+              </div>
+              <p class="review-text">
+                The Smart Cities workshop completely changed how I see the place I live in. I never realised
+                how much technology shapes the way a city functions day to day.
+                <a href="#">See more</a>
+              </p>
+              <div class="review-footer">
+                <span>Marcus T.</span>
+                <span>February 3, 2025</span>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="review-top">
+                <span class="review-title">The clean streets drive was so rewarding</span>
+                <span class="review-score">9/10 Excellent</span>
+              </div>
+              <p class="review-text">
+                I joined the neighbourhood clean-up on a whim and ended up going back every month.
+                It is a brilliant way to meet people and make a visible difference in your local area.
+                <a href="#">See more</a>
+              </p>
+              <div class="review-footer">
+                <span>Lena K.</span>
+                <span>March 17, 2025</span>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="review-top">
+                <span class="review-title">Great initiative, well structured</span>
+                <span class="review-score">8/10 Great</span>
+              </div>
+              <p class="review-text">
+                The Green Building Design Challenge gave me real project experience working with professionals.
+                The team was supportive and the sessions were genuinely enjoyable.
+                <a href="#">See more</a>
+              </p>
+              <div class="review-footer">
+                <span>Aisha B.</span>
+                <span>January 28, 2025</span>
+              </div>
+            </div>
+
+          </div><!-- end review-list -->
+        </div><!-- end ratings-layout -->
+      </section>
+
+
+      <!-- SECTION 3: FEEDBACK FORM -->
+      <section class="feedback-section">
+        <h2 class="section-heading">Share Your Feedback</h2>
+        <div class="section-line"></div>
+        <p class="section-desc">Help us improve by telling us about your experience.</p>
+
+        <div class="form-box">
+          <form id="feedbackForm" novalidate>
+
+            <!-- FIELDSET 1: Personal Details -->
+            <fieldset>
+              <legend>Personal Details</legend>
+              <div class="form-grid">
+
+                <!-- Full Name -->
+                <div class="form-group">
+                  <label for="fullName">Full Name <span class="req">*</span></label>
+                  <input type="text" id="fullName" name="fullName" placeholder="e.g. Jane Smith" required>
+                  <span class="error-msg" id="fullName-err">Please enter your full name.</span>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                  <label for="email">Email Address <span class="req">*</span></label>
+                  <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+                  <span class="error-msg" id="email-err">Please enter a valid email address.</span>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                  <label for="phone">Telephone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+44 7700 900000">
+                  <span class="error-msg" id="phone-err">Please enter a valid phone number.</span>
+                </div>
+
+                <!-- Programme attended (searchable suggestions dropdown) -->
+                <div class="form-group">
+                  <label for="programme">Programme Attended</label>
+                  <input list="programme-list" id="programme" name="programme" placeholder="Start typing a programme...">
+                  <datalist id="programme-list">
+                    <option value="Green Building Design Challenge">
+                    <option value="Clean Transport Campaign">
+                    <option value="Urban Community Gardens">
+                    <option value="Smart Cities Workshop Series">
+                    <option value="Affordable Housing Advocacy">
+                    <option value="Neighbourhood Clean Streets Drive">
+                  </datalist>
+                </div>
+
+                <!-- Address -->
+                <div class="form-group full-width">
+                  <label for="address">Address</label>
+                  <textarea id="address" name="address" rows="2" placeholder="Your address (optional)"></textarea>
+                </div>
+
+              </div>
+            </fieldset>
+
+            <!-- FIELDSET 2: Feedback Details -->
+            <fieldset>
+              <legend>Feedback Details</legend>
+              <div class="form-grid">
+
+                <!-- Rating dropdown -->
+                <div class="form-group">
+                  <label for="rating">Overall Rating <span class="req">*</span></label>
+                  <select id="rating" name="rating" required>
+                    <option value="">— Select a rating —</option>
+                    <option value="10">10 — Exceptional</option>
+                    <option value="9">9 — Excellent</option>
+                    <option value="8">8 — Very Good</option>
+                    <option value="7">7 — Good</option>
+                    <option value="6">6 — Average</option>
+                    <option value="5">5 — Below Average</option>
+                    <option value="4">4 or below — Poor</option>
+                  </select>
+                  <span class="error-msg" id="rating-err">Please select a rating.</span>
+                </div>
+
+                <!-- Date of participation -->
+                <div class="form-group">
+                  <label for="visitDate">Date of Participation <span class="req">*</span></label>
+                  <input type="date" id="visitDate" name="visitDate" required>
+                  <span class="error-msg" id="visitDate-err">Please enter the date you took part.</span>
+                </div>
+
+                <!-- Multi-select list -->
+                <div class="form-group full-width">
+                  <label for="interests">
+                    Areas of Interest
+                    <small style="font-weight:400; color:#888">(Hold Ctrl/Cmd to select more than one)</small>
+                  </label>
+                  <select id="interests" name="interests" multiple size="4">
+                    <option value="housing">Affordable Housing</option>
+                    <option value="transport">Clean Transport</option>
+                    <option value="green-spaces">Green Spaces & Gardens</option>
+                    <option value="smart-city">Smart City Technology</option>
+                    <option value="community">Community Projects</option>
+                  </select>
+                </div>
+
+                <!-- Preferred follow-up date and time -->
+                <div class="form-group">
+                  <label for="followupDate">Preferred Follow-up Date & Time</label>
+                  <input type="datetime-local" id="followupDate" name="followupDate">
+                </div>
+
+                <!-- Message with live character counter -->
+                <div class="form-group full-width">
+                  <label for="message">Your Comment / Message <span class="req">*</span></label>
+                  <textarea id="message" name="message" maxlength="500" rows="5" placeholder="Share your experience, suggestions, or feedback..."></textarea>
+                  <span class="char-counter" id="charCounter">500 characters remaining</span>
+                  <span class="error-msg" id="message-err">Please enter a message (at least 10 characters).</span>
+                </div>
+
+              </div>
+            </fieldset>
+
+            <!-- Submit button -->
+            <button type="submit" class="submit-btn">Send Feedback</button>
+
+            <!-- Success message — hidden until form passes validation -->
+            <div class="confirmation-msg" id="confirmMsg" role="alert">
+            Thank you for your feedback! We really appreciate your input and will use it to improve our programmes.
+            </div>
+
+          </form>
+        </div><!-- end form-box -->
+      </section>
+
+    </main><!-- end main -->
+
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+
+            <ul>
+               <li><a href="../Web-Coursework/index.html" class="footer-link">Home</a></li>
+              <li><a href="../Web-Coursework/gallery.html" class="footer-link">Gallery</a></li>
+              <li><a href="../web_project/validation_ST0.html" class="footer-link">Validation</a></li>
+              <li><a href="#" class="student-1">Student-1 Tara Sah | ID: w2121966</a></li>
+              <li><a href="#" class="student-2">Student-2 Lalika Sah | ID: w2122516</a></li>
+              <li><a href="#" class="student-3">Student-3 Shraddha Baniya | ID: w2121958</a></li>
+              <li><a href="#" class="student-4">Student-4 Binisha Shrestha | ID: w2149568</a></li>
+            </ul>
+            
+          </div>
+          <div>
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="../Web-Coursework/pageEditor_ST1.html" class="footer-link">ST1: Page Editor</a></li>
+              <li><a href="../web_project/pageEditor_ST2.html" class="footer-link">ST2: Page Editor</a></li>
+              <li><a href="../CWK/pageEditor_ST3.html" class="footer-link">ST3: Page Editor</a></li>
+              <li><a href="../webCS/pageeditor.html" class="footer-link">ST4: Page Editor</a></li>
+              <li><a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer" class="footer-link">W3C Validation</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Sustainable Cities & Communities — Student 3 | SDG Coursework Project</p>
+        </div>
+      </div>
+    </footer>
+
+
+ <!-- JAVASCRIPt -->
+    <script>
+
+      /*1. LIVE CHARACTER COUNTER*/
+      var messageBox = document.getElementById('message');
+      var counter    = document.getElementById('charCounter');
+      var MAX        = 500;
+
+      messageBox.addEventListener('input', function () {
+        var remaining = MAX - messageBox.value.length;
+        counter.textContent = remaining + ' characters remaining';
+        counter.classList.remove('warn', 'over');
+        if (remaining <= 50 && remaining > 0) {
+          counter.classList.add('warn');
+        }
+        if (remaining <= 0) {
+          counter.classList.add('over');
+        }
+      });
+
+
+      /*2. CLEAR ERRORS WHILE TYPING*/
+      ['fullName', 'email', 'phone', 'rating', 'visitDate', 'message'].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) {
+          el.addEventListener('input', function () {
+            el.classList.remove('error');
+            var errEl = document.getElementById(id + '-err');
+            if (errEl) {
+              errEl.classList.remove('show');
+            }
+          });
+        }
+      });
+
+
+      /*3. FORM VALIDATION ON SUBMIT*/
+      document.getElementById('feedbackForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var isValid = true;
+
+        /* Check: Full Name */
+        var nameVal = document.getElementById('fullName').value.trim();
+        if (nameVal.length < 2) {
+          document.getElementById('fullName').classList.add('error');
+          document.getElementById('fullName-err').classList.add('show');
+          isValid = false;
+        } else {
+          document.getElementById('fullName').classList.remove('error');
+          document.getElementById('fullName-err').classList.remove('show');
+        }
+
+        /* Check: Email */
+        var emailVal = document.getElementById('email').value.trim();
+        var emailOk  = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal);
+        if (!emailOk) {
+          document.getElementById('email').classList.add('error');
+          document.getElementById('email-err').classList.add('show');
+          isValid = false;
+        } else {
+          document.getElementById('email').classList.remove('error');
+          document.getElementById('email-err').classList.remove('show');
+        }
+
+        /* Check: Phone (only if filled in) */
+        var phoneVal = document.getElementById('phone').value.trim();
+        if (phoneVal.length > 0) {
+          var phoneOk = /^[\d\s\+\-\(\)]{7,}$/.test(phoneVal);
+          if (!phoneOk) {
+            document.getElementById('phone').classList.add('error');
+            document.getElementById('phone-err').classList.add('show');
+            isValid = false;
+          } else {
+            document.getElementById('phone').classList.remove('error');
+            document.getElementById('phone-err').classList.remove('show');
+          }
+        }
+
+        /* Check: Rating */
+        var ratingVal = document.getElementById('rating').value;
+        if (!ratingVal) {
+          document.getElementById('rating').classList.add('error');
+          document.getElementById('rating-err').classList.add('show');
+          isValid = false;
+        } else {
+          document.getElementById('rating').classList.remove('error');
+          document.getElementById('rating-err').classList.remove('show');
+        }
+
+        /* Check: Date */
+        var dateVal = document.getElementById('visitDate').value;
+        if (!dateVal) {
+          document.getElementById('visitDate').classList.add('error');
+          document.getElementById('visitDate-err').classList.add('show');
+          isValid = false;
+        } else {
+          document.getElementById('visitDate').classList.remove('error');
+          document.getElementById('visitDate-err').classList.remove('show');
+        }
+
+        /* Check: Message */
+        var msgVal = document.getElementById('message').value.trim();
+        if (msgVal.length < 10) {
+          document.getElementById('message').classList.add('error');
+          document.getElementById('message-err').classList.add('show');
+          isValid = false;
+        } else {
+          document.getElementById('message').classList.remove('error');
+          document.getElementById('message-err').classList.remove('show');
+        }
+
+        /* Show success or scroll to first error */
+        var confirmMsg = document.getElementById('confirmMsg');
+        if (isValid) {
+          confirmMsg.classList.add('show');
+          this.reset();
+          counter.textContent = MAX + ' characters remaining';
+          counter.classList.remove('warn', 'over');
+          confirmMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          confirmMsg.classList.remove('show');
+          var firstErr = document.querySelector('.error-msg.show');
+          if (firstErr) {
+            firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }
+      });
+
+    </script>
+
+</body>
+</html>

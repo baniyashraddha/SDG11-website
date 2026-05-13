@@ -1,0 +1,781 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    
+    body {
+      font-family:Arial, Helvetica, sans-serif;
+      background-color: #f5f5f5;
+      color: #222;
+    }
+
+    /* HEADER & NAVIGATION */
+    header {
+      background-color: #1a3c34;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.15)
+    }
+    
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    
+    .logo-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    
+    .logo-text {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 1px;
+    }
+
+/* ---------- Navigation Bar ---------- */
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+/* Navigation links with hover effect */
+    .nav-link {
+      display: inline-block;
+      padding: 8px 16px;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      position: relative;
+      text-decoration: none;
+    }
+    
+    .nav-link:hover {
+      background-color: rgba(255,255,255,0.15);
+      color: #ffffff;
+    }
+
+/* Active page style */
+    .nav-link-active {
+      background-color: rgba(255,255,255,0.2);
+      color: #ffffff;
+    }
+    
+    .nav-link-active::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 16px;
+      right: 16px;
+      height: 2px;
+      background-color: #d4a44a;
+      border-radius: 1px;
+    }
+
+    /* PAGE BANNER */
+    .banner {
+      background-color: #265348;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      overflow: hidden;
+    }
+
+    .banner h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .banner p {
+      font-size: 1rem;
+      color: rgba(255,255,255,.8);
+    }
+
+    /* =====================
+       MAIN CONTENT AREA
+    ===================== */
+    main {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    /* Section headings */
+    .section-heading {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #1a5c38;
+      margin-bottom: 5px;
+    }
+
+    .section-line {
+      width: 50px;
+      height: 4px;
+      background-color: orange;
+      border-radius: 2px;
+      margin-bottom: 15px;
+    }
+
+    .section-desc {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    /* =====================
+       SORT DROPDOWN + COUNT
+    ===================== */
+    .dir-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .dir-controls span {
+      font-size: 0.88rem;
+      color: #555;
+    }
+
+    .dir-controls select {
+      padding: 8px 12px;
+      border: 1.5px solid #ccc;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.88rem;
+      cursor: pointer;
+      background-color: white;
+    }
+
+    /* =====================
+       SCROLLABLE CARDS AREA
+    ===================== */
+
+    /* This wrapper makes the cards scrollable */
+    .cards-scroll-box {
+      max-height: 500px;       /* Fixed height so it scrolls */
+      overflow-y: auto;        /* Enables vertical scroll */
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      background-color: #fff;
+    }
+
+    /* Grid layout for the cards inside */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    /* Individual card */
+    .card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
+      transition: transform .2s, box-shadow .2s;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Card image */
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      transition: transform .4s;
+    }
+
+    .card img:hover {
+         transform: scale(1.05);
+        }
+
+
+    /* Card text content */
+    .card-body {
+      padding: 15px;
+         flex: 1;
+    }
+
+    .card-body h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #1a5c38;
+      margin-bottom: 8px;
+    }
+
+    .card-body p {
+      font-size: 0.82rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    /* Small badge labels on cards */
+    .badge {
+      display: inline-block;
+      background-color: #e8f5ee;
+      color: #1a5c38;
+      font-size: 0.72rem;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-right: 5px;
+      margin-bottom: 10px;
+    }
+
+    /* Card button */
+    .card-btn {
+      display: inline-block;
+      background-color: #2e7d52;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      transition: background-color 0.2s;  /* Smooth colour change on hover */
+    }
+
+    /* Button hover effect */
+    .card-btn:hover {
+      background-color: #1a5c38;
+      transform: scale(1.04);
+      box-shadow: 0 4px 12px rgba(26,122,74,.35);
+    }
+
+    /* =====================
+       RATINGS SECTION
+    ===================== */
+    .ratings-section {
+      margin-top: 50px;
+    }
+
+    /* Side-by-side layout: summary box + review cards */
+    .ratings-layout {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    /* Left box: overall score */
+    .rating-summary {
+      background-color: #1a5c38;
+      color: white;
+      border-radius: 10px;
+      padding: 25px 20px;
+      text-align: center;
+      min-width: 200px;
+      flex-shrink: 0;
+    }
+
+    .rating-summary .big-score {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #4ddb85;
+      line-height: 1;
+    }
+
+    .rating-summary .score-label {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 8px 0 4px;
+    }
+
+    .rating-summary .score-count {
+      font-size: 0.8rem;
+      color: #aee8c8;
+    }
+
+    /* Right side: review cards stacked */
+    .review-list {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .review-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px 18px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    .review-card .review-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .review-card .review-title {
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: #1a5c38;
+    }
+
+    .review-card .review-score {
+      background-color: #2e7d52;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+
+    .review-card .review-text {
+      font-size: 0.83rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+
+    .review-card .review-text a {
+      color: #2e7d52;
+      font-weight: 600;
+    }
+
+    .review-card .review-footer {
+      font-size: 0.75rem;
+      color: #999;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* =====================
+       FEEDBACK FORM
+    ===================== */
+    .feedback-section {
+      margin-top: 50px;
+    }
+
+    /* White box wrapping the form */
+    .form-box {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    /* Fieldset groups the form into sections */
+    fieldset {
+      border: 1.5px solid #dddddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 25px;
+    }
+
+    /* Fieldset title */
+    legend {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #1a5c38;
+      padding: 0 8px;
+    }
+
+    /* Two-column grid inside fieldsets */
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    /* Makes a field span both columns */
+    .full-width {
+      grid-column: 1 / -1;
+    }
+
+    /* Label above each input */
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    label {
+      font-size: 0.83rem;
+      font-weight: 600;
+    }
+
+    /* Red asterisk for required fields */
+    label .req {
+      color: red;
+    }
+
+    /* All input/textarea/select share these styles */
+    input,
+    textarea,
+    select {
+      padding: 9px 12px;
+      border: 1.5px solid #ccc;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.88rem;
+      background-color: #fafafa;
+      width: 100%;
+    }
+
+    /* Highlight input when user clicks on it */
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: #2e7d52;
+      background-color: white;
+    }
+
+    /* Red border for invalid fields */
+    input.error,
+    textarea.error,
+    select.error {
+      border-color: red;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    /* Character counter below message box */
+    .char-counter {
+      font-size: 0.78rem;
+      color: #888;
+      text-align: right;
+    }
+
+    /* Turns orange when close to limit */
+    .char-counter.warn {
+      color: orange;
+    }
+
+    /* Turns red when at limit */
+    .char-counter.over {
+      color: red;
+    }
+
+    /* Error message under a field */
+    .error-msg {
+      font-size: 0.78rem;
+      color: red;
+      display: none;   /* Hidden by default */
+    }
+
+    /* Show the error message */
+    .error-msg.show {
+      display: block;
+    }
+
+    /* Submit button */
+    .submit-btn {
+      background-color: #2e7d52;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 28px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .submit-btn:hover {
+      background-color: #1a5c38;
+    }
+
+    /* Success message shown after valid submission */
+    .confirmation-msg {
+      display: none;   /* Hidden until form is submitted successfully */
+      background-color: #e6f9ee;
+      border: 1.5px solid #4ddb85;
+      border-radius: 8px;
+      padding: 15px 20px;
+      margin-top: 15px;
+      color: #1a5c38;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .confirmation-msg.show {
+      display: block;
+    }
+
+    /* Responsive: stack to 1 column on small screens */
+    @media (max-width: 600px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* =====================
+       TEAM GRID
+       Displays 4 cards side by side (2 per row on smaller screens).
+    ===================== */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 30px;
+    }
+
+    /* =====================
+       TEAM MEMBER CARD
+       Each card holds the photo and the hidden details panel.
+    ===================== */
+    .member-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      overflow: hidden;              /* Keeps content inside the rounded corners */
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      cursor: pointer;               /* Shows a hand cursor so users know it's interactive */
+
+      /* Smooth transition for the shadow and scale on hover */
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    /* ---- Hover effect on the whole card ---- */
+    /* When the user hovers over or focuses on the card, it lifts up slightly */
+    .member-card:hover,
+    .member-card:focus {
+      transform: translateY(-6px);                        /* Moves card upward */
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);       /* Stronger shadow */
+      outline: 3px solid #4ddb85;                        /* Green outline for focus/hover */
+    }
+
+    /* =====================
+       THUMBNAIL AREA
+       The top part of the card with the photo.
+    ===================== */
+    .member-photo {
+      overflow: hidden;
+    }
+ 
+    .member-photo img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s;    /* Slight zoom on hover */
+    }
+ 
+    /* Zoom the photo slightly on hover */
+    .member-card:hover .member-photo img,
+    .member-card:focus .member-photo img {
+      transform: scale(1.05);
+    }
+ 
+    /*ALWAYS-VISIBLE NAME BAR 
+    Shows the member's name and role at all times below the photo.*/
+    .member-info {
+      padding: 12px 16px;
+      border-top: 1px solid #eee;
+    }
+ 
+    .member-info h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #1a5c38;
+      margin-bottom: 3px;
+    }
+ 
+    .member-info .role-label {
+      font-size: 0.78rem;
+      color: #888;
+    }
+ 
+    /* =====================
+       SLIDE-DOWN DETAILS BOX
+       Hidden by default using max-height: 0.
+       Expands downward when the card is hovered or focused.
+    ===================== */
+    .overlay {
+      max-height: 0;                 /* Collapsed — takes up no space */
+      overflow: hidden;              /* Hides content while collapsed */
+      background-color: #1a5c38;    /* Dark green background */
+      color: white;
+ 
+      /* Smooth expand animation using max-height */
+      transition: max-height 0.4s ease, padding 0.4s ease;
+      padding: 0 16px;              /* No top/bottom padding when collapsed */
+    }
+ 
+    /* Expand the details box on hover or focus */
+    .member-card:hover .overlay,
+    .member-card:focus .overlay {
+      max-height: 200px;             /* Large enough to fit all content */
+      padding: 14px 16px;            /* Restore padding when expanded */
+    }
+ 
+    .overlay h3 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: #4ddb85;                /* Green name heading */
+    }
+ 
+    .overlay .role {
+      font-size: 0.76rem;
+      color: #aee8c8;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+ 
+    .overlay p {
+      font-size: 0.75rem;
+      line-height: 1.55;
+      color: #d4f5e2;
+    }
+ 
+    /* Pages contributed — small tags */
+    .pages-list {
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+ 
+    .page-tag {
+      background-color: #e8f5ee;
+      color: #1a5c38;
+      font-size: 0.72rem;
+      padding: 3px 8px;
+      border-radius: 20px;
+    }
+ 
+
+    /* =====================
+       FOOTER
+    ===================== */
+    footer {
+      background-color: #1a3c34;
+      padding: 40px 0;
+      color: rgba(255,255,255,0.7);
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+    
+    .footer-grid h3 {
+      font-size: 1.1rem;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+    
+    .footer-grid p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+    .footer-grid ul {
+      list-style: none;
+    }
+    
+    .footer-grid ul li {
+      margin-bottom: 8px;
+    }
+
+/* Footer links with hover */
+    .footer-link {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-link:hover {
+      color: #d4a44a;
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 24px;
+      text-align: center;
+    }
+    
+    .footer-bottom p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    * ---------- Grid Utility ---------- */
+   .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .grid-4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+/* ---------- Section Spacing ---------- */
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-alt {
+    padding: 60px 0;
+    background-color: #eef2ed;
+  }
+
+/* ---------- Responsive ---------- */
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .grid-4 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
